@@ -1,0 +1,27 @@
+version: "3"
+volumes:
+  unmount:
+services:
+  #mysql
+  db:
+    build: ./docker/construct_db
+    restart: always
+    image: intrapps_db_image:0.1 # Docker image name
+    container_name: intrapps_db_container # Docker container name
+    environment:
+      MYSQL_DATABASE: "app"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "password"
+      MYSQL_ROOT_PASSWORD: "rootpassword"
+    volumes:
+      - ./app/mysql/mysql_data:/var/lib/mysql # parmanent data
+      - ./app/mysql/sqls:/docker-entrypoint-initdb.d # initial data
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    networks:
+      - intrapps_network
+networks:
+  intrapps_network:
+    external: true
