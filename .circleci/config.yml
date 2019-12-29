@@ -37,7 +37,7 @@ jobs:
           name: Tag to latest
           command: |
             export DB_IMAGE_TAG=`grep intrapps_db_image docker-compose.yml | awk '{print $2}' | sed s/:/\ / | awk '{print $2}'`
-            docker tag `docker images | grep intrapps_web_image | awk '{print $3}'` intrapps/intrapps_db:${DB_IMAGE_TAG}
+            docker tag `docker images | grep intrapps_db_image | awk '{print $3}'` intrapps/intrapps_db:${DB_IMAGE_TAG}
             docker images
       - run:
           name: Docker Login
@@ -45,5 +45,5 @@ jobs:
       - run:
           name: Push image to registory
           command: |
-            export DB_IMAGE_TAG=`grep intrapps_web_image docker-compose.yml | awk '{print $2}' | sed s/:/\ / | awk '{print $2}'`
+            export DB_IMAGE_TAG=`grep intrapps_db_image docker-compose.yml | awk '{print $2}' | sed s/:/\ / | awk '{print $2}'`
             docker push intrapps/intrapps_db:${DB_IMAGE_TAG}
