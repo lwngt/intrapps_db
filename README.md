@@ -26,11 +26,11 @@ You can use investigate and modify Intrapps database definitions.
 
 ## How to debug of API
 
-[Click here for detailed debug of Database](http://www.intrapps.com/spec/how-to-debug.html#db)
+[Click here for detailed debug of Database](https://www.intrapps.com/spec/how-to-debug.html#db)
 
 ## Database spec
 
-[Click here for detailed Database spec](http://www.intrapps.com/spec/intrapps_db.html)
+[Click here for detailed Database spec](https://www.intrapps.com/spec/intrapps_db.html)
 
 ## Other repogitory
 
@@ -43,3 +43,7 @@ You can use investigate and modify Intrapps database definitions.
 Intrapps<br>
 Copyright (c) 2020 [Lichtwork.com](https://www.lichtwork.com)<br>
 Apache License 2.0
+
+## Story
+
+[here](https://www.intrapps.com/story.html)
