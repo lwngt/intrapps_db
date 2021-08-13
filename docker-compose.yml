@@ -6,7 +6,7 @@ services:
   db:
     build: ./docker/construct_db
     restart: always
-    image: intrapps_db_image:0.2.0 # Docker image name
+    image: intrapps_db_image:0.3.0 # Docker image name
     container_name: intrapps_db_container # Docker container name
     environment:
       MYSQL_DATABASE: "app"

@@ -1,4 +1,4 @@
-FROM mysql:5.7
+FROM mysql:8.0.26
 EXPOSE 3306
 
 # For character code setting
